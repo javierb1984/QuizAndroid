@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<preguntas>
+        <pregunta>
+            <texto>¿Qué animal de los siguientes no tiene pulmones?</texto>
+            <respuestas>Ratones,Serpientes,Escorpiones,Hormigas</respuestas>
+            <correcta>4</correcta>
+            <tipo>NORMAL</tipo>
+        </pregunta>
+
+    <pregunta>
+        <texto>¿A que compuesto químico corresponde NH3?</texto>
+        <respuestas>Nitrógeno,Amoniaco,Hidruro Nitroso,Metanol</respuestas>
+        <correcta>2</correcta>
+        <tipo>NORMAL</tipo>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Qué famoso físico y astrónomo desarrolló la teoria de la relatividad clásica?</texto>
+        <respuestas>Albert Einstein,Galileo Galilei,Nikola Tesla,Max Planck</respuestas>
+        <correcta>2</correcta>
+        <tipo>NORMAL</tipo>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Cual es el nombre del siguiente mineral?</texto>
+        <respuestas>Feldespato,Talco,Cuarzo,Zircón</respuestas>
+        <correcta>3</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>cuarzo</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿De los siguientes cuerpos celestes cual de ellos corresponde con una supernova?</texto>
+        <respuestas></respuestas>
+        <correcta>3</correcta>
+        <tipo>IMAGE</tipo>
+        <ruta>cuerpo_celeste1,cuerpo_celeste2,supernova,cuerpo_celeste3</ruta>
+    </pregunta>
+</preguntas>
