@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private NormalQuestion nq_fragment = new NormalQuestion();
     private ImageAnswer ia_fragment = new ImageAnswer();
 
-    //Pregunta data
+    //Question data
     private final int QUESTIONS_TOTAL = 20;
     private int questionNumber = 0;
     private Pregunta currentQuestion;
@@ -286,14 +286,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changeActivity(){
-        Intent intent = new Intent(this, Score.class);
+        Intent intent = new Intent(this, ScoreActivity.class);
         intent.putExtra("POINTS", String.valueOf(score));
         startActivity(intent);
     }
 
     protected void resetAll(){
         //Set views
-        scoreView = findViewById(R.id.score);
+        scoreView = findViewById(R.id.score_title);
         questionView = findViewById(R.id.question);
         scoreView.setText("Puntuación: "+score);
         questionView.setText("Pregunta: "+questionNumber);

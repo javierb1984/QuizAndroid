@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<puntuaciones>
+    <puntuacion>
+        <usuario>cokosd</usuario>
+        <puntos>1</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>tonto</usuario>
+        <puntos>60</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>carapasa</usuario>
+        <puntos>100</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>adios</usuario>
+        <puntos>8</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>asfasg</usuario>
+        <puntos>13</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>username</usuario>
+        <puntos>32</puntos>
+    </puntuacion>
+    <puntuacion>
+        <usuario>default</usuario>
+        <puntos>23</puntos>
+    </puntuacion>
+</puntuaciones>

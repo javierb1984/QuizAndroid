@@ -20,7 +20,7 @@
         </activity>
         <activity android:name=".Settings">
         </activity>
-        <activity android:name=".Score">
+        <activity android:name=".ScoreActivity">
         </activity>
     </application>
 

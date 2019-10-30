@@ -8,23 +8,206 @@
 
     <Button
         android:id="@+id/replay"
-        android:layout_width="402dp"
-        android:layout_height="72dp"
+        android:layout_width="407dp"
+        android:layout_height="94dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/score"
+        android:id="@+id/score_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Puntuaciones"
+        android:textAllCaps="true"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/replay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="323dp"
+        android:layout_height="285dp"
+        app:layout_constraintBottom_toTopOf="@+id/replay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score_title"
+        app:layout_constraintVertical_bias="0.558">
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score1"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score2"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score3"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name4"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score4"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name5"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score5"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name6"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score6"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name7"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score7"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name8"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score8"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name9"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score9"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="235dp"
+            android:layout_height="199dp">
+
+            <TextView
+                android:id="@+id/name10"
+                android:layout_width="223dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/score10"
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
+        </TableRow>
+
+
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

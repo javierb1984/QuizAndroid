@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/score"
+        android:id="@+id/score_title"
         android:layout_width="123dp"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
@@ -28,7 +28,7 @@
         android:layout_marginTop="32dp"
         android:text="TextView"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/score"
+        app:layout_constraintEnd_toStartOf="@+id/score_title"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
