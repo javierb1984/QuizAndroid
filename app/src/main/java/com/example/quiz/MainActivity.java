@@ -5,14 +5,17 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.quiz.Fragments.ImageAnswer;
 import com.example.quiz.Fragments.MediaQuestion;
@@ -59,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton[] oldRadiobuttons;
     private Button oldCheck;
     private ImageView oldIView;
+    private VideoView oldVView;
     private ImageButton [] oldImagebuttons;
 
     @Override
@@ -142,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupQuestion(){
 
             if(currentQuestion.getTipo() == previousType){
-                setupText(oldView, oldRadioGroup, oldRadiobuttons, oldCheck, oldIView, oldImagebuttons);
+                setupText(oldView, oldRadioGroup, oldRadiobuttons, oldCheck, oldIView, oldVView, oldImagebuttons);
             }
             else {
                 FragmentTransaction transaction;
@@ -186,7 +190,7 @@ public class MainActivity extends AppCompatActivity {
         else changeActivity();
     }
 
-    public void setupText(TextView view, RadioGroup radioGroup, RadioButton[] radiobuttons, Button check, ImageView iView, ImageButton [] imageButtons){
+    public void setupText(TextView view, RadioGroup radioGroup, RadioButton[] radiobuttons, Button check, ImageView iView, VideoView vView, ImageButton [] imageButtons){
 
         view.setText(currentQuestion.getTexto());
 
@@ -196,12 +200,30 @@ public class MainActivity extends AppCompatActivity {
         oldRadiobuttons = radiobuttons;
         oldCheck = check;
         oldIView = iView;
+        oldVView = vView;
         oldImagebuttons = imageButtons;
 
         if(currentQuestion.getTipo() == Type.MEDIA){
-            int id = getResources().getIdentifier(currentQuestion.getRuta()[0], "drawable", getPackageName());
-            iView.setImageResource(id);
-            oldIView = iView;
+            if(currentQuestion.getRuta()[1].equals("image")) {
+                vView.setVisibility(View.INVISIBLE);
+                int id = getResources().getIdentifier(currentQuestion.getRuta()[0], "drawable", getPackageName());
+                iView.setImageResource(id);
+                iView.setVisibility(View.VISIBLE);
+            }
+            else {
+                iView.setVisibility(View.INVISIBLE);
+                int id = getResources().getIdentifier(currentQuestion.getRuta()[0], "raw", getPackageName());
+                String path = "android.resource://" + getPackageName() + "/" + id;
+
+                MediaController m = new MediaController(this);
+                vView.setMediaController(m);
+
+                vView.setVideoURI(Uri.parse(path));
+
+                vView.start();
+
+                vView.setVisibility(View.VISIBLE);
+            }
         }
 
 

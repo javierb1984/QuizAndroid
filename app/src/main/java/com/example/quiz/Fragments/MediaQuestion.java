@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.VideoView;
 
 import com.example.quiz.MainActivity;
 import com.example.quiz.Pregunta;
@@ -57,7 +58,8 @@ public class MediaQuestion extends Fragment{
         }
 
         ImageView imageView = getView().findViewById(R.id.imageView);
-        ((MainActivity)getActivity()).setupText(tview, group, button, check, imageView, null);
+        VideoView videoView = getView().findViewById(R.id.videoView);
+        ((MainActivity)getActivity()).setupText(tview, group, button, check, imageView, videoView, null);
     }
 
 }

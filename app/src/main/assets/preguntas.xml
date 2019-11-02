@@ -26,7 +26,15 @@
         <respuestas>Feldespato,Talco,Cuarzo,Zircón</respuestas>
         <correcta>3</correcta>
         <tipo>MEDIA</tipo>
-        <ruta>cuarzo</ruta>
+        <ruta>cuarzo,image</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>Prueba video</texto>
+        <respuestas>respuesta,respuesta,respuesta,respuesta</respuestas>
+        <correcta>3</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>prueba,video</ruta>
     </pregunta>
 
     <pregunta>

@@ -47,7 +47,7 @@ public class ImageAnswer extends Fragment {
         for (int i = 0; i < 4; i++) {
             button[i] = getView().findViewById(IMAGE_BUTTONS[i]);
         }
-            ((MainActivity) getActivity()).setupText(tview, null, null, null, null, button);
+            ((MainActivity) getActivity()).setupText(tview, null, null, null, null, null, button);
 
     }
 

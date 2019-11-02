@@ -47,7 +47,7 @@ public class NormalQuestion extends Fragment {
             button[i] = getView().findViewById(BUTTONS[i]);
         }
 
-        ((MainActivity)getActivity()).setupText(tview, group, button, check, null, null);
+        ((MainActivity)getActivity()).setupText(tview, group, button, check, null, null, null);
     }
 
 }
