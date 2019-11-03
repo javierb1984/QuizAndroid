@@ -31,6 +31,14 @@ public class MainMenu extends AppCompatActivity {
                 changeActivity(Settings.class);
             }
         });
+
+        Button score = findViewById(R.id.buttonLeaderboard);
+        score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeActivity(ScoreActivity.class);
+            }
+        });
     }
 
     protected void changeActivity(Class gotoClass){

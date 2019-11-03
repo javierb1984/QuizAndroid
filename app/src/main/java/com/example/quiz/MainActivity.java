@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private int score = 0;
     private ArrayList<Pregunta> preguntas;
     private ArrayList<Pregunta> randomQuestions;
+    private String currentPlayer = "anónimo";
 
     //Radio Group
     protected int answerNumber = 0;
@@ -308,8 +309,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void changeActivity(){
-        Intent intent = new Intent(this, ScoreActivity.class);
+        Intent intent = new Intent(this, GameoverActivity.class);
         intent.putExtra("POINTS", String.valueOf(score));
+        intent.putExtra("PLAYER", currentPlayer);
         startActivity(intent);
     }
 
