@@ -1,12 +1,10 @@
 package com.example.quiz;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -40,11 +38,11 @@ public class GameoverActivity extends AppCompatActivity {
         });
 
         //Create parser
-        ScoreParser parser = new ScoreParser();
+        Parser parser = new Parser();
 
         //Read previous stored scores
         puntuaciones = new ArrayList<Puntuacion>();
-        puntuaciones = parser.parseXML(getApplicationContext());
+        puntuaciones = parser.parseScoreXML(getApplicationContext());
 
         //Add new player score
         puntuacion = new Puntuacion();
@@ -62,7 +60,7 @@ public class GameoverActivity extends AppCompatActivity {
 
         //Toast.makeText(getApplicationContext(), puntuacion.getPuntos(), Toast.LENGTH_LONG).show();
         //Store new scores
-        parser.writeXML(getApplicationContext(), puntuaciones);
+        parser.writeScoreXML(getApplicationContext(), puntuaciones);
     }
 
 

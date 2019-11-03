@@ -42,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
 
     //Question data
     private final int QUESTIONS_TOTAL = 20;
+    private int nPreguntas;
     private int questionNumber = 0;
     private Pregunta currentQuestion;
     private int score = 0;
     private ArrayList<Pregunta> preguntas;
     private ArrayList<Pregunta> randomQuestions;
     private String currentPlayer = "anónimo";
+    private Parser parser = new Parser();
 
     //Radio Group
     protected int answerNumber = 0;
@@ -71,62 +73,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_layout);
 
-        parseXML();
+        preguntas = parser.parsePreguntasXML(getApplicationContext());
+        nPreguntas = parser.parseSettingsXML(getApplicationContext());
 
         resetAll();
-    }
-
-    private void parseXML(){
-        XmlPullParserFactory parserFactory;
-        try{
-            parserFactory = XmlPullParserFactory.newInstance();
-            XmlPullParser parser = parserFactory.newPullParser();
-            InputStream is = getAssets().open("preguntas.xml");
-
-            parser.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-            parser.setInput(is, null);
-
-            processParser(parser);
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private void processParser(XmlPullParser parser) throws XmlPullParserException, IOException {
-
-        preguntas = new ArrayList<Pregunta>();
-        int eventType = parser.getEventType();
-        Pregunta pregunta = null;
-
-        while (eventType != XmlPullParser.END_DOCUMENT){
-            String nameTag = null;
-
-            switch (eventType){
-                case XmlPullParser.START_TAG:
-                    nameTag = parser.getName();
-
-                    if(nameTag.equals("pregunta")) {
-                        pregunta = new Pregunta();
-                        preguntas.add(pregunta);
-                    }
-                    else if(pregunta != null){
-                        if(nameTag.equals("texto"))
-                            pregunta.setTexto(parser.nextText());
-                        else if(nameTag.equals("respuestas"))
-                            pregunta.setRespuesta(parser.nextText().split(","));
-                        else if(nameTag.equals("correcta"))
-                            pregunta.setCorrecta(Integer.parseInt(parser.nextText()));
-                        else if(nameTag.equals("tipo"))
-                            pregunta.setTipo(Enum.valueOf(Type.class, parser.nextText()));
-                        else if(nameTag.equals("ruta"))
-                            pregunta.setRuta(parser.nextText().split(","));
-                    }
-                break;
-            }
-            eventType = parser.next();
-        }
     }
 
     private ArrayList<Pregunta> selectRandom(int n){
@@ -327,8 +277,8 @@ public class MainActivity extends AppCompatActivity {
         questionNumber = 0;
         score = 0;
 
-        //Random question list is selectect from pool (n size)
-        randomQuestions = selectRandom(3);
+        //Random question list is selected from pool (n size)
+        randomQuestions = selectRandom(nPreguntas);
         currentQuestion = randomQuestions.get(questionNumber);
         setupQuestion();
     }

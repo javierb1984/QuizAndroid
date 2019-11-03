@@ -33,11 +33,11 @@ public class ScoreActivity extends AppCompatActivity {
         });
 
         //Create a new parser
-        ScoreParser parser = new ScoreParser();
+        Parser parser = new Parser();
 
         //Read previous stored scores
         puntuaciones = new ArrayList<Puntuacion>();
-        puntuaciones = parser.parseXML(getApplicationContext());
+        puntuaciones = parser.parseScoreXML(getApplicationContext());
 
         TextView tv;
         for(int i = 0; i < puntuaciones.size(); i++){
