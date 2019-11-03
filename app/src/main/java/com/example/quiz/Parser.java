@@ -27,9 +27,10 @@ public class Parser {
     private final String preguntasFile = "preguntas.xml";
     private ArrayList<Pregunta> preguntas;
 
-    //Settings
+    //SettingsActivity
     private final String settingsFile = "settingsFile.xml";
-    private int nPreguntas = 0;
+    private int nPreguntas = 5;
+    private String usuario = "Anónimo";
 
     public Parser() {
     }
@@ -190,8 +191,8 @@ public class Parser {
         }
     }
 
-    //Settings
-    public int parseSettingsXML(Context context){
+    //SettingsActivity
+    public Settings parseSettingsXML(Context context){
 
         XmlPullParserFactory parserFactory;
 
@@ -210,7 +211,7 @@ public class Parser {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            return nPreguntas;
+            return new Settings(nPreguntas, usuario);
         }
     }
 
@@ -227,13 +228,16 @@ public class Parser {
                     if(nameTag.equals("nPreguntas")) {
                         nPreguntas = Integer.parseInt(parser.nextText());
                     }
+                    else if(nameTag.equals("Usuario")){
+                        usuario = parser.nextText();
+                    }
                     break;
             }
             eventType = parser.next();
         }
     }
 
-    public void writeSettingsXML(Context context, int nPreguntas){
+    public void writeSettingsXML(Context context, int nPreguntas, String user){
         try {
             FileOutputStream fileOutputStream = context.openFileOutput(settingsFile, context.MODE_PRIVATE);
             XmlSerializer xmlSerializer = Xml.newSerializer();
@@ -247,6 +251,10 @@ public class Parser {
             xmlSerializer.startTag(null, "nPreguntas");
             xmlSerializer.text(String.valueOf(nPreguntas));
             xmlSerializer.endTag(null, "nPreguntas");
+
+            xmlSerializer.startTag(null, "Usuario");
+            xmlSerializer.text(user);
+            xmlSerializer.endTag(null, "Usuario");
             //*/
 
             xmlSerializer.endTag(null, "settings");

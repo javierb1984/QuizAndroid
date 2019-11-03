@@ -21,12 +21,6 @@ import com.example.quiz.Fragments.ImageAnswer;
 import com.example.quiz.Fragments.MediaQuestion;
 import com.example.quiz.Fragments.NormalQuestion;
 
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -48,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private int score = 0;
     private ArrayList<Pregunta> preguntas;
     private ArrayList<Pregunta> randomQuestions;
-    private String currentPlayer = "anónimo";
+    private String currentPlayer = "Anónimo";
     private Parser parser = new Parser();
 
     //Radio Group
@@ -74,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_layout);
 
         preguntas = parser.parsePreguntasXML(getApplicationContext());
-        nPreguntas = parser.parseSettingsXML(getApplicationContext());
+        Settings settings = parser.parseSettingsXML(getApplicationContext());
+
+        nPreguntas = settings.getnPreguntas();
+        currentPlayer = settings.getUsuario();
 
         resetAll();
     }
