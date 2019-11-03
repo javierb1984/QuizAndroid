@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <preguntas>
-        <pregunta>
-            <texto>¿Qué animal de los siguientes no tiene pulmones?</texto>
-            <respuestas>Ratones,Serpientes,Escorpiones,Hormigas</respuestas>
-            <correcta>4</correcta>
-            <tipo>NORMAL</tipo>
-        </pregunta>
+    <pregunta>
+        <texto>¿Qué animal de los siguientes no tiene pulmones?</texto>
+        <respuestas>Ratones,Serpientes,Escorpiones,Hormigas</respuestas>
+        <correcta>4</correcta>
+        <tipo>NORMAL</tipo>
+    </pregunta>
 
     <pregunta>
         <texto>¿A que compuesto químico corresponde NH3?</texto>
@@ -44,4 +44,85 @@
         <tipo>IMAGE</tipo>
         <ruta>cuerpo_celeste1,cuerpo_celeste2,supernova,cuerpo_celeste3</ruta>
     </pregunta>
+
+    <pregunta>
+        <texto>¿Cómo se llama el personaje de esta escena de Star Wars?</texto>
+        <respuestas>Luke Skywalker,Obi-Wan Kenobi,Jabba the Hut,Darth Vader</respuestas>
+        <correcta>2</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videopersonaje,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Como se llama el perro de esta escena de Toy Story?</texto>
+        <respuestas>Buster, Slinky, Bud, Scud</respuestas>
+        <correcta>1</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoperro,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿A cuál de las siguientes peliculas pertenece esta escena?</texto>
+        <respuestas>Joker, La naranja mecánica, El Resplandor, Saw</respuestas>
+        <correcta>3</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoescena2,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿A cuál de las siguientes peliculas pertenece la siguiente escena?</texto>
+        <respuestas>Parque Jurasico, 2001: Una odisea espacial, El planeta de los simios, King Kong</respuestas>
+        <correcta>3</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoescena1,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Que producto se esta vendiendo en este anuncio de televisión?</texto>
+        <respuestas>Desodorante, Colonia, Gel, Poder en lata</respuestas>
+        <correcta>1</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoterry,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Cómo se llama el fenomeno que se ve en el siguiente video?</texto>
+        <respuestas>Supernova, Borrasca, Huracán luminoso, Aurora boreal</respuestas>
+        <correcta>4</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videofenomeno,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Que animal es el que se ve en el siguiente video?</texto>
+        <respuestas>Caiman, Cocodrilo de Komodo, Komodrilo, Dragon de Komodo</respuestas>
+        <correcta>4</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoanimal2,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿Que animal es el que se ve en el siguiente video?</texto>
+        <respuestas>Ornitorrinco, Castor, Conejo, Oso de la madera</respuestas>
+        <correcta>2</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videoanimal1,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿De que ciudad del mundo se trata?</texto>
+        <respuestas>Los Angeles, Madrid, Hong Kong, Nueva York</respuestas>
+        <correcta>4</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videociudad2,video</ruta>
+    </pregunta>
+
+    <pregunta>
+        <texto>¿De que ciudad del mundo se trata?</texto>
+        <respuestas>Paris, Lyon, Versalles, Barcelona</respuestas>
+        <correcta>1</correcta>
+        <tipo>MEDIA</tipo>
+        <ruta>videociudad1,video</ruta>
+    </pregunta>
+
 </preguntas>
