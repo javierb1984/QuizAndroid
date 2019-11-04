@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
     private ImageAnswer ia_fragment = new ImageAnswer();
 
     //Question data
-    private final int QUESTIONS_TOTAL = 20;
     private int nPreguntas;
     private int questionNumber = 0;
     private Pregunta currentQuestion;
@@ -129,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         questionNumber++;
 
         scoreView.setText("Puntuación: "+score);
-        questionView.setText("Pregunta: "+questionNumber);
+        questionView.setText("Pregunta: "+questionNumber+"/"+nPreguntas);
 
         if(questionNumber < randomQuestions.size()){
             currentQuestion = randomQuestions.get(questionNumber);
@@ -267,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
         scoreView = findViewById(R.id.score_title);
         questionView = findViewById(R.id.question);
         scoreView.setText("Puntuación: "+score);
-        questionView.setText("Pregunta: "+questionNumber);
+        questionView.setText("Pregunta: "+questionNumber+"/"+nPreguntas);
 
         //Reset answer, question and score numbers
         answerNumber = 0;

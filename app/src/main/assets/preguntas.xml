@@ -63,8 +63,8 @@
 
     <pregunta>
         <texto>¿A cuál de las siguientes peliculas pertenece la siguiente escena?</texto>
-        <respuestas>Parque Jurasico,2001: Una odisea espacial,El planeta de los simios,King Kong</respuestas>
-        <correcta>3</correcta>
+        <respuestas>Parque Jurasico,2001: Una odisea del espacio,El planeta de los simios,King Kong</respuestas>
+        <correcta>2</correcta>
         <tipo>MEDIA</tipo>
         <ruta>videoescena1,video</ruta>
     </pregunta>
