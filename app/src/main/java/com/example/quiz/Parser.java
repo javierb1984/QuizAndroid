@@ -78,6 +78,8 @@ public class Parser {
                             puntuacion.setJugador(parser.nextText());
                         else if(nameTag.equals("puntos"))
                             puntuacion.setPuntos(Integer.parseInt(parser.nextText()));
+                        else if(nameTag.equals("tiempo"))
+                            puntuacion.setTiempo(parser.nextText());
                     }
                     break;
             }
@@ -130,6 +132,10 @@ public class Parser {
             xmlSerializer.startTag(null, "puntos");
             xmlSerializer.text(String.valueOf(puntuaciones2.get(i).getPuntos()));
             xmlSerializer.endTag(null, "puntos");
+
+            xmlSerializer.startTag(null, "tiempo");
+            xmlSerializer.text(String.valueOf(puntuaciones2.get(i).getTiempo()));
+            xmlSerializer.endTag(null, "tiempo");
 
             xmlSerializer.endTag(null, "puntuacion");
         }

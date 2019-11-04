@@ -24,9 +24,13 @@ public class GameoverActivity extends AppCompatActivity {
         Intent intent = getIntent();
         int puntos = Integer.parseInt(intent.getStringExtra("POINTS"));
         String jugador = intent.getStringExtra("PLAYER");
+        String tiempo = intent.getStringExtra("TIME");
 
         TextView score = findViewById(R.id.score);
         score.setText("Su puntuación es de: \n          "+ puntos +" puntos");
+
+        TextView time = findViewById(R.id.time);
+        time.setText(tiempo);
 
         Button replay = findViewById(R.id.replay);
         replay.setText("Volver a Jugar");
@@ -48,6 +52,7 @@ public class GameoverActivity extends AppCompatActivity {
         puntuacion = new Puntuacion();
         puntuacion.setJugador(jugador);
         puntuacion.setPuntos(puntos);
+        puntuacion.setTiempo(tiempo.split(" ")[1]);
         puntuaciones.add(puntuacion);
 
         //Sort scores by highest

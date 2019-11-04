@@ -41,12 +41,30 @@ public class ScoreActivity extends AppCompatActivity {
 
         TextView tv;
         for(int i = 0; i < puntuaciones.size(); i++){
+            //To use params
+            Puntuacion p = puntuaciones.get(i);
+            String jugador = (i+1)+"º "+p.getJugador();
+            String tiempo = p.getTiempo();
+            int puntos = p.getPuntos();
+
+            //Set everything to the same distance
+            int addJugador = (18 - jugador.length());
+            int addScore = (3 - String.valueOf(puntos).length());
+
             //Crear cuadros e insertar las puntuaciones en ellos
             tv = findViewById(PLAYER_VIEWS[i]);
-            tv.setText((i+1)+"º   "+puntuaciones.get(i).getJugador());
+            tv.setText(jugador);
             tv = findViewById(SCORE_VIEWS[i]);
-            tv.setText(puntuaciones.get(i).getPuntos() + "  puntos");
+            tv.setText(tiempo + "   "+ puntos + setSpaces(addScore) + " puntos");
         }
+    }
+
+    private String setSpaces(int n){
+        String string = "";
+        for(int i = 0; i < n; i++){
+            string += " ";
+        }
+        return string;
     }
 
     protected void changeActivity(){

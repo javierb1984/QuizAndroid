@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -33,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     private MediaQuestion mq_fragment = new MediaQuestion();
     private NormalQuestion nq_fragment = new NormalQuestion();
     private ImageAnswer ia_fragment = new ImageAnswer();
+
+    //Chronometer
+    private Chronometer chronometer;
+    String time;
 
     //Question data
     private int nPreguntas;
@@ -128,13 +133,16 @@ public class MainActivity extends AppCompatActivity {
         questionNumber++;
 
         scoreView.setText("Puntuación: "+score);
-        questionView.setText("Pregunta: "+questionNumber+"/"+nPreguntas);
 
         if(questionNumber < randomQuestions.size()){
+            questionView.setText("Pregunta: "+(questionNumber+1)+"/"+nPreguntas);
             currentQuestion = randomQuestions.get(questionNumber);
             setupQuestion();
         }
-        else changeActivity();
+        else{
+            time = chronometer.stop();
+            changeActivity();
+        }
     }
 
     public void setupText(TextView view, RadioGroup radioGroup, RadioButton[] radiobuttons, Button check, ImageView iView, VideoView vView, ImageButton [] imageButtons){
@@ -258,15 +266,21 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GameoverActivity.class);
         intent.putExtra("POINTS", String.valueOf(score));
         intent.putExtra("PLAYER", currentPlayer);
+        intent.putExtra("TIME", time);
         startActivity(intent);
     }
 
     protected void resetAll(){
+        //Set chronometer
+        TextView textView = findViewById(R.id.cronometro);
+        chronometer = new Chronometer(textView, "Tiempo",new Handler());
+        new Thread(chronometer).start();
+
         //Set views
         scoreView = findViewById(R.id.score_title);
         questionView = findViewById(R.id.question);
         scoreView.setText("Puntuación: "+score);
-        questionView.setText("Pregunta: "+questionNumber+"/"+nPreguntas);
+        questionView.setText("Pregunta: "+(questionNumber+1)+"/"+nPreguntas);
 
         //Reset answer, question and score numbers
         answerNumber = 0;
