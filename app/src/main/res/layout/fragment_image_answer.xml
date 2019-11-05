@@ -30,12 +30,14 @@
                     android:id="@+id/imageButton1"
                     android:layout_width="162dp"
                     android:layout_height="156dp"
+                    android:background="#FAB824"
                     android:scaleType="fitXY" />
 
                 <ImageButton
                     android:id="@+id/imageButton2"
                     android:layout_width="162dp"
                     android:layout_height="156dp"
+                    android:background="#FAB824"
                     android:scaleType="fitXY" />
             </TableRow>
 
@@ -47,12 +49,14 @@
                     android:id="@+id/imageButton3"
                     android:layout_width="162dp"
                     android:layout_height="156dp"
+                    android:background="#FAB824"
                     android:scaleType="fitXY" />
 
                 <ImageButton
                     android:id="@+id/imageButton4"
                     android:layout_width="162dp"
                     android:layout_height="156dp"
+                    android:background="#FAB824"
                     android:scaleType="fitXY" />
 
             </TableRow>

@@ -23,6 +23,7 @@
         android:id="@+id/button"
         android:layout_width="420dp"
         android:layout_height="82dp"
+        android:background="#D59C1E"
         android:text="Comprobar"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"

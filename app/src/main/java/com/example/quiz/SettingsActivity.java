@@ -47,12 +47,18 @@ public class SettingsActivity extends AppCompatActivity {
         switch(nPreguntas) {
             case 5:
                 button5.setPressed(true);
+                button10.setAlpha(0.5f);
+                button15.setAlpha(0.5f);
                 break;
             case 10:
                 button10.setPressed(true);
+                button5.setAlpha(0.5f);
+                button15.setAlpha(0.5f);
                 break;
             case 15:
                 button15.setPressed(true);
+                button5.setAlpha(0.5f);
+                button10.setAlpha(0.5f);
                 break;
         }
 
@@ -64,6 +70,10 @@ public class SettingsActivity extends AppCompatActivity {
                 button5.setPressed(true);
                 button10.setPressed(false);
                 button15.setPressed(false);
+
+                button5.setAlpha(1);
+                button10.setAlpha(0.5f);
+                button15.setAlpha(0.5f);
 
                 return true;
             }
@@ -78,6 +88,10 @@ public class SettingsActivity extends AppCompatActivity {
                 button10.setPressed(true);
                 button15.setPressed(false);
 
+                button5.setAlpha(0.5f);
+                button10.setAlpha(1);
+                button15.setAlpha(0.5f);
+
                 return true;
             }
         });
@@ -90,6 +104,10 @@ public class SettingsActivity extends AppCompatActivity {
                 button5.setPressed(false);
                 button10.setPressed(false);
                 button15.setPressed(true);
+
+                button5.setAlpha(0.5f);
+                button10.setAlpha(0.5f);
+                button15.setAlpha(1);
 
                 return true;
             }

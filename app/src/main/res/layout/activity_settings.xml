@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FAB824">
 
     <TextView
         android:id="@+id/title"
@@ -25,6 +26,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="20dp"
+        android:background="@drawable/backgroundbuttons"
+        android:tint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_menu_revert" />
@@ -38,7 +41,8 @@
         android:layout_marginTop="70dp"
         android:text="5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:background="@drawable/backgroundbuttons"/>
 
     <Button
         android:id="@+id/button10"
@@ -52,7 +56,8 @@
         android:text="10"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:background="@drawable/backgroundbuttons"/>
 
     <Button
         android:id="@+id/button15"
@@ -63,7 +68,8 @@
         android:layout_marginRight="40dp"
         android:text="15"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:background="@drawable/backgroundbuttons"/>
 
     <TextView
         android:id="@+id/numPreguntas"

@@ -4,12 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FAB824">
 
     <Button
         android:id="@+id/replay"
         android:layout_width="407dp"
         android:layout_height="94dp"
+        android:alpha="0.5"
+        android:background="#D59C1E"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
